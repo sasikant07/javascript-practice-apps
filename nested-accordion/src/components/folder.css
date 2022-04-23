@@ -1,0 +1,23 @@
+.folder {
+    display: block;
+    padding-left: 18px;
+}
+
+.file {
+    display: none;
+}
+
+.btn-file {
+    display: inline;
+    color: #fff;
+}
+
+.btn-folder {
+    display: inline;
+    padding-left: 8px;
+    color: #fff;
+}
+ span {
+     padding-left: 4px;
+     color: #fff;
+ }

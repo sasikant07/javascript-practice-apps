@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Tabs = () => {
-    const [currentTab, setCurrentTab] = useState(1);
+    const [currentTab, setCurrentTab] = useState(0);
 
     const tabs = [
         {

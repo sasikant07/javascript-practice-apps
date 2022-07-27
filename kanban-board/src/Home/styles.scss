@@ -1,0 +1,24 @@
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    display: flex;
+    min-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    background-color: #09a8e7;
+}
+
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+      width: 400px;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .wrapper {
+      width: 400px;
+      display: block;
+    }
+  }

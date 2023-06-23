@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 10,
+      "name": "Clementina DuBuquess",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "phone": "024-648-3804",
+      "website": "ambrose.net"
+    },
+    {
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "phone": "2424-4-340505",
+      "id": 11
+    }
+  ]
+}

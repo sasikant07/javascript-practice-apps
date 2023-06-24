@@ -17,18 +17,18 @@ export const fetchUsers = createAsyncThunk('user/fetchUsers', async (args, {reje
     }
 });
 
-export const getUserDetails = createAsyncThunk(
-    "users/getUserDetails",
-    async (id, {rejectWithValue}) => {
-        const response =  await fetch(`http://localhost:4000/users/${id}`);
-        try {
-            const result = await response.json();
-            return result;
-        } catch (error) {
-            return rejectWithValue(error);
-        }
-    }
-);
+// export const getUserDetails = createAsyncThunk(
+//     "users/getUserDetails",
+//     async (id, {rejectWithValue}) => {
+//         const response =  await fetch(`http://localhost:4000/users/${id}`);
+//         try {
+//             const result = await response.json();
+//             return result;
+//         } catch (error) {
+//             return rejectWithValue(error);
+//         }
+//     }
+// );
 
 export const addUser = createAsyncThunk(
     "users/addUser",
@@ -101,19 +101,20 @@ const userSlice = createSlice({
             state.error = action.error.message
         });
         // GET A SINGLE USER
-        builder.addCase(getUserDetails.pending, (state) => {
-            state.loading = true;
-        });
-        builder.addCase(getUserDetails.fulfilled, (state, action) => {
-            state.loading = false;
-            state.users = state.users.filter((item) => item.id === action.payload.id);
-            state.error = ''
-        });
-        builder.addCase(getUserDetails.rejected, (state, action) => {
-            state.loading = false;
-            state.users = [];
-            state.error = action.error.message
-        });
+        // builder.addCase(getUserDetails.pending, (state) => {
+        //     state.loading = true;
+        // });
+        // builder.addCase(getUserDetails.fulfilled, (state, action) => {
+        //     state.loading = false;
+        //     // state.users = state.users.filter((item) => item.id === action.payload.id);
+        //     state.users = [action.payload];
+        //     state.error = ''
+        // });
+        // builder.addCase(getUserDetails.rejected, (state, action) => {
+        //     state.loading = false;
+        //     state.users = [];
+        //     state.error = action.error.message
+        // });
 
         // ADD/POST NEW USER
         builder.addCase(addUser.pending, (state) => {
@@ -136,7 +137,8 @@ const userSlice = createSlice({
         });
         builder.addCase(updateUser.fulfilled, (state, action) => {
             state.loading = false;
-            state.users = state.users.map((user) => user.id === action.payload.id ? action.payload : user);
+            // state.users = state.users.map((user) => user.id === action.payload.id ? action.payload : user);
+            state.users = [action.payload];
             state.error = ''
         });
         builder.addCase(updateUser.rejected, (state, action) => {

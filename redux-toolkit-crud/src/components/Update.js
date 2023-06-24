@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Link, useNavigate, useParams} from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserDetails, updateUser } from '../features/userSlice';
+import { updateUser } from '../features/userSlice';
 import {toast} from 'react-toastify';
 
 const Update = () => {
@@ -12,10 +12,6 @@ const Update = () => {
   
   const user = userList.users.find(ele => ele.id == id);
   const [values, setValues] = useState(user);
-
-  useEffect(() => {
-    dispatch(getUserDetails(id));
-  }, [dispatch])
 
   const handleChange = (e) => {
     setValues({...values, [e.target.name]: e.target.value});

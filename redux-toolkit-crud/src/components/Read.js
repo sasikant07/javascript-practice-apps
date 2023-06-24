@@ -4,15 +4,9 @@ import {Link, useParams} from "react-router-dom";
 import { getUserDetails } from '../features/userSlice';
 
 const Read = () => {
-    const dispatch = useDispatch();
     const {id} = useParams();
     const userList = useSelector((state) => state.users);
     const users = userList.users.find(ele => ele.id == id);
-
-    useEffect(() => {
-        dispatch(getUserDetails(id));
-    }, [dispatch, id]);
-
 
   return (
     <div className="d-flex w-100 vh-100 justify-content-center align-items-center bg-light">

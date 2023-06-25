@@ -50,7 +50,7 @@ const getHighlightedText = (text, highlight) => {
       </form>
       <h3>Items:</h3>
       {filteredItems.map((item, index) => (
-        <div key={item}>
+        <div key={index}>
           <p>{getHighlightedText(item, query)}</p>
         </div>
       ))}

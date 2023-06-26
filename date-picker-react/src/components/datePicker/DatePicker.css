@@ -1,0 +1,56 @@
+.pickerWrapper {
+    border: 1px solid red;
+    border-radius: 7px;
+    width: 500px;
+}
+.pickerWrapper button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header p {
+    flex: 1 0 0;
+}
+
+.header ion-icon {
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+.datepicker-body {
+    margin: 5px;
+}
+
+.sevenColGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 10px;
+}
+
+.heading {
+    font-weight: bold;
+}
+
+.sevenColGrid .active {
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+.sevenColGrid button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.sevenColGrid button:disabled {
+    text-decoration: line-through;
+}

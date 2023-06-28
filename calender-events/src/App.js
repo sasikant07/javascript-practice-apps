@@ -4,22 +4,26 @@ import Calender from './Calender/Calender';
 import { MOCKEVENTS } from './consts';
 
 function App() {
-  const [events, setevents] = useState(MOCKEVENTS);
+  const [events, setEvents] = useState(MOCKEVENTS);
 
   const addEvent = (date, color) => {
     const text = window.prompt("text");
-    setevents(prev => [...prev, {date, title: text, color, id: Math.random()}])
+    if(text) {
+      setEvents(prev => [...prev, {date, title: text, color, id: Math.random()}])
+    }
   }
 
   const onDragEvents = (uodatedEvents) => {
-    setevents(uodatedEvents);
+    setEvents(uodatedEvents);
   }
 
   return (
     <div>
-      <Calender startingDate={new Date()} eventsArr={events} setevents={setevents} addEvent={addEvent} onDragEvents={onDragEvents} />
+      <Calender startingDate={new Date()} eventsArr={events} setEvents={setEvents} addEvent={addEvent} onDragEvents={onDragEvents} />
     </div>
   );
 }
 
 export default App;
+
+// https://codesandbox.io/embed/calender-cvievv?codemirror=1

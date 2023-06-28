@@ -1,16 +1,13 @@
 import React, { useRef, useState } from 'react';
 import "./Calender.css";
 import { DAYS, MONTHS } from '../consts';
-import { areDatesTheSame, getDateObj, getDaysInMonth, getRandomDarkColor, getSortedDays, range } from '../utils';
+import { areDatesTheSame, getDateObj, getRandomDarkColor, getSortedDays } from '../utils';
 
-const Calender = ({startingDate, eventsArr, addEvent, onDragEvents, setevents}) => {
-    const [currentDate, setCurrentDate] = useState(new Date());
+const Calender = ({startingDate, eventsArr, addEvent, onDragEvents, setEvents}) => {
     const [currentMonth, setCurrentMonth] = useState(startingDate.getMonth());
     const [currentYear, setCurrentYear] = useState(startingDate.getFullYear());
     const [showPortal, setShowPortal] = useState(false);
     const [portalData, setPortalData] = useState({});
-
-    const DAYSINAMONTH = getDaysInMonth(currentMonth, currentYear);
 
     const prevMonth = () => {
         if (currentMonth > 0) {
@@ -70,7 +67,7 @@ const Calender = ({startingDate, eventsArr, addEvent, onDragEvents, setevents}) 
     }
 
     const handleDelete = () => {
-        setevents(prevEvents => prevEvents.filter((events) => events.title !== portalData.title));
+        setEvents(prevEvents => prevEvents.filter((events) => events.title !== portalData.title));
         setShowPortal(false);
     }
 
@@ -82,18 +79,19 @@ const Calender = ({startingDate, eventsArr, addEvent, onDragEvents, setevents}) 
             <ion-icon onClick={nextMonth} name="arrow-forward-circle-outline"></ion-icon>
         </div>
         <div className="sevenColGrid">
-            {getSortedDays(currentMonth, currentYear).map((day) => (
-                <div className="day-head" key={day}>{day}</div>
+            {DAYS.map((day) => (
+                <div className="dayHead" key={day}>{day}</div>
             ))}
         </div>
         <div className={`calenderBody ${currentMonth === 1 ? "fourCol" : "fiveCol"}`} >
-            {range(DAYSINAMONTH).map((day) => (
+            {getSortedDays(currentMonth, currentYear).map((day) => (
             <div 
                 onClick={(e) => onAddEvent(getDateObj(day, currentMonth, currentYear), e)}
                 onDragEnter={(e) => onDragEnter(e, getDateObj(day, currentMonth, currentYear))}
                 onDragEnd={onDragEnd}
                 onDragOver={(e) => e.preventDefault()}
-                key={day}
+                id={`${currentYear}/${currentMonth}/${day === undefined ? Math.random() : day}`}
+                key={`${currentYear}/${currentMonth}/${day === undefined ? Math.random() : day}`}
                 className={`styledDay ${areDatesTheSame(new Date(), getDateObj(day, currentMonth, currentYear)) ? "active" : ""}`}>
                     <p>{day}</p>
 
@@ -130,3 +128,23 @@ const Portal = ({title, date, handleDelete, handlePortalCose}) => {
         </div>
     )
 }
+
+const EventWrapper = ({ children }) => {
+    if (children.filter((child) => child).length)
+      return (
+        <>
+          {children}
+          {children.filter((child) => child).length > 2 && (
+            <div
+                className='seeMore'
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("clicked see more");
+              }}
+            >
+              see more...
+            </div>
+          )}
+        </>
+      );
+  };

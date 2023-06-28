@@ -15,7 +15,7 @@
 
 .calenderHead p {
     margin-top: 5px;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .calenderHead ion-icon{
@@ -31,10 +31,11 @@
     height: 27px;
 }
 
-.day-head {
+.dayHead {
     text-align: center;
     background: darkkhaki;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .calenderBody {
@@ -109,5 +110,12 @@
     right: 10px;
     background: red;
     color: lightblue;
+    cursor: pointer;
+}
+
+.seeMore {
+    font-size: 12px;
+    padding: 0 5px;
+    margin-bottom: 0;
     cursor: pointer;
 }

@@ -1,0 +1,88 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  ),
+  url("https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?cs=srgb&dl=pexels-simon-berger-1323550.jpg&fm=jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+form {
+  background-color: #fff;
+  padding: 0 60px;
+  border-radius: 10px;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 400px;
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+}
+
+.btn {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #89b2f1;
+  cursor: pointer;
+}
+
+.non-valid {
+  font-size: 14px;
+  padding: 3px;
+  color: red;
+}
+
+input {
+  border: 1px solid black;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ span {
+  display: block;
+}

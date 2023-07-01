@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+htnml, body {
+  margin: 0;
+}
+
+.overview, .home, .about, .profile, .users, .revenue, .order, .history, .configuration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #000000;
+  height: 90vh;
+}

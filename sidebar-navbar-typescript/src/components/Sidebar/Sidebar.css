@@ -1,0 +1,33 @@
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* height: 5rem; */
+    background-color: black;
+}
+
+.navIcon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* height: 5rem; */
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.sidebarNav {
+    width: 250px;
+    height: 100vh;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    transition: 350ms;
+}
+
+.no-left {
+    left: 0;
+}
+
+.left {
+    left: -100%;
+}

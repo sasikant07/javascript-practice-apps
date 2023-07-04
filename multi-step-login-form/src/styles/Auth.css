@@ -188,8 +188,7 @@
     z-index: 1;
 }
 
-#Auth .register .progress-bar ul li::before,
-#Auth .register .progress-bar ul .progress {
+#Auth .register .progress-bar ul li::before {
     content: attr(data-title);
     position: absolute;
     font-size: 0.85rem;
@@ -197,7 +196,8 @@
     color: #000;
 }
 
-#Auth .register .progress-bar ul::before {
+#Auth .register .progress-bar ul::before, 
+#Auth .register .progress-bar ul .progress {
     content: "";
     position: absolute;
     top: 50%;
@@ -221,7 +221,7 @@
     width: calc(100% / 3 * 0);
 }
 
-#Auth .register .progress-bar .progress ul li.active::before {
+#Auth .register .progress-bar ul li.active::before {
     color: #e8505b;
     transition-delay: 0.3s;
 }

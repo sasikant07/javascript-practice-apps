@@ -17,8 +17,8 @@ const RegisterForm = () => {
     <div className="register">
         <strong>Sign Up</strong>
         <div className="progress-bar">
-            <div className="progress"  style={{width: `calc(100% / 3 * ${currIndex})`}}/>
             <ul>
+            <div className="progress"  style={{width: `calc(100% / 3 * ${currIndex})`}}/>
                 {
                     ["Name", "Contact", "Birth", "Submit"].map((item, index) => (
                         <li ley={item} data-title={item} className={`${currIndex >= index ? "active" : ""}`}>

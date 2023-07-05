@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+}
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 5%;
+}
+
+table {
+    margin-left: 33.33%;
+    margin-top: 2%;
+}
+
+td {
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid lightblue;
+    font-size: 80px;
+    color: yellow;
+}
+
+.restart {
+    width: 160px;
+    height: 40px;
+    margin-left: 640px;
+    margin-top: 20px;
+    border-radius: 4px;
+    background: rgb(15, 179, 234);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.restart:hover {
+    background-color: lightblue;
+}
+
+.status {
+    margin-top: 10px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}

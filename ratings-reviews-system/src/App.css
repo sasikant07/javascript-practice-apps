@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  margin: 20px;
+  padding: 20px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.heading > p {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.average-ratings-container {
+  width: 180px;
+  height: 150px;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 10px 0px gray;
+  border-radius: 8px;
+  padding-top: 10px;
+}
+
+.average-ratings-container > p {
+  margin-top: 16px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.avg-ratings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.avg-ratings > h1 {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+
+.heading-star {
+  color: orange;
+  margin-top: 4px;
+}
+
+.ratings-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+.progress-bar {
+  width: 850px;
+  height: 10px;
+  border: 1px solid gray;
+  background-color: lightskyblue;
+  border-radius: 20px;
+}
+
+.add-review-btn {
+  width: 170px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+.add-review-btn:hover {
+  background-color: #454343;
+}
+
+.portalWrapper {
+  background: white;
+  position: absolute;
+  width: 60%;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  border-radius: 6px;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 20px black;
+  padding: 40px;
+}
+
+.portalWrapper > button {
+  background: #f44444;
+  border-radius: 6px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.portalWrapper > button:hover {
+  background-color: #f47c7c;
+}

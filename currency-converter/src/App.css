@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1, p {
+  margin: 0;
+  margin-bottom: .5rem;
+  color: black;
+}
+
+.input {
+  border: 1px solid #333;
+  border-radius: .3rem;
+  padding: 0.25rem;
+  width: 10em;
+}
+
+select {
+  margin-left: .5rem;
+}
+
+.equals {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.oneCurrencyText {
+  color: black;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.ratesText {
+  color: #202124;
+}

@@ -99,4 +99,9 @@ export const data = [
         ratings: 3,
         reviews: "Good!"
     },
+    {
+        id: 21,
+        ratings: 5,
+        reviews: "Good!"
+    },
 ]

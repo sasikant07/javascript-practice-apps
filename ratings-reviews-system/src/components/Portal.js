@@ -4,8 +4,8 @@ const Portal = ({toggleModal}) => {
   return (
     <div className="portalWrapper">
       <div className="overlay" onClick={toggleModal}></div>
-        <h2>What is your experience about this product?</h2>
-        <button type="button" onClick={toggleModal}>close</button>
+        <h4>What is your experience about this product?</h4>
+        <button className="close-modal" onClick={toggleModal}>X</button>
     </div>
   )
 }

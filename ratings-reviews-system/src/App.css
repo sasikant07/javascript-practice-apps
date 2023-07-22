@@ -1,76 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Roboto, sans-serif;
-}
-
-.container {
-  margin: 20px;
-  padding: 20px;
-}
-
-.heading {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.heading > p {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.average-ratings-container {
-  width: 180px;
-  height: 150px;
-  border: 1px solid transparent;
-  box-shadow: 0px 4px 10px 0px gray;
-  border-radius: 8px;
-  padding-top: 10px;
-}
-
-.average-ratings-container > p {
-  margin-top: 16px;
-  font-size: 18px;
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+.App {
   text-align: center;
 }
 
-.avg-ratings {
+.App-main {
+  background-color: #f5f8ff;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.avg-ratings > h1 {
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
-
-.heading-star {
-  color: orange;
-  margin-top: 4px;
-}
-
-.ratings-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 200px;
-  margin-top: 30px;
-}
-
-.progress-bar {
-  width: 850px;
-  height: 10px;
-  border: 1px solid gray;
-  background-color: lightskyblue;
-  border-radius: 20px;
+  font-size: calc(10px + 2vmin);
+  color: #000;
 }
 
 .add-review-btn {
@@ -81,8 +22,7 @@ body {
   border-radius: 30px;
   font-size: 20px;
   cursor: pointer;
-  margin-left: 200px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .add-review-btn:hover {
@@ -98,20 +38,172 @@ body {
   left: 50%;
   border-radius: 6px;
   transform: translate(-50%, -50%);
-  box-shadow: 10px 10px 20px black;
+  box-shadow: 0px 0px 0px black;
   padding: 40px;
+  display: flex;
 }
 
-.portalWrapper > button {
-  background: #f44444;
-  border-radius: 6px;
-  width: 60px;
-  height: 30px;
-  border: none;
+.portalWrapper > h4 {
+  padding-left: 200px;
+}
+
+
+/* ======================================================================================================= */
+
+/* Card */
+
+.Card {
+  font-family: Muli;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 547px;
+  height: 602px;
+  left: 20%;
+  top: 10%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px 0px rgba(193, 211, 251, 0.5);
+  padding: 50px 30px;
+  box-sizing: border-box;
+}
+
+.Card-title {
+  font-size: 32px;
+  color: #323357;
+  margin: 0 0 20px;
+}
+
+.Card-subheader {
+  background: #f5f8ff;
+  border-radius: 40px;
+  width: 70%;
+  height: 63px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Card-review-stars {
+  width: 53%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card-review-points {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #323357;
+}
+
+.Card-ratings-count {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #595b71;
+  margin-top: 5px;
+}
+
+.Card-sum-up {
+  margin: 30px auto 0;
+}
+
+.Card-footer {
+  margin-top: 20px;
+}
+
+.Card-footer a {
+  font-size: 16px;
+  line-height: 20px;
+  color: #2a5bda;
+  text-decoration: none;
+}
+
+
+/* ================================================================================ */
+
+/* StarBar */
+
+.StarBar {
+  position: relative;
+}
+
+.StarBar-filled {
+  position: absolute;
+  top: 0;
+}
+
+
+/* ======================================================================================== */
+
+/* ProgressBar */
+.ProgressBar {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.ProgressBar-bg {
+  background: #f5f8ff;
+  border-radius: 18px;
+  width: 280px;
+  height: 16px;
+  position: relative;
+  margin: 20px 12px;
+}
+
+.ProgressBar-fill {
+  background: #ffcc48;
+  box-shadow: 0px 4px 10px rgba(255, 204, 72, 0.53);
+  border-radius: 18px;
+  width: 246px;
+  height: 16px;
+  position: absolute;
+}
+
+.ProgressBar-label {
+  color: #2a5bda;
+}
+
+.ProgressBar-percent {
+  color: #323357;
+}
+
+.icon-fill {
+  color: #ffcc48;
+}
+
+.empty {
+  color: lightcyan;
+}
+
+/* ============================================================================================== */
+
+/* Modal */
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.close-modal {
+  position: absolute;
+  font-size: 30px;
+  top: 20px;
+  right: 20px;
+  /* padding: 5px 7px; */
   cursor: pointer;
-  color: white;
-}
-
-.portalWrapper > button:hover {
-  background-color: #f47c7c;
 }

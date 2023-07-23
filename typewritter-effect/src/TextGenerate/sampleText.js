@@ -1,0 +1,1 @@
+export const dummyText = `Hi, My name is Sasikant Biswal and I am a Software Engineer`;

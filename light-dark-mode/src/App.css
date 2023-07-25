@@ -1,0 +1,68 @@
+:root {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+}
+
+.dark-theme {
+  --clr-bcg: #282c35;
+  --clr-font: #fff;
+  --clr-primary: #ffa7c4;
+}
+
+.light-theme {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--clr-bcg);
+  color: var(--clr-font);
+  transition: all 0.3s linear;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  color: var(--clr-font);
+}
+
+h2 {
+  color: var(--clr-font);
+}
+
+.toggle-button {
+  width: 70px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 50px;
+  float: right;
+  margin-right: 100px;
+  margin-top: 20px;
+  cursor: pointer;
+  padding-top: 4px;
+}
+
+.toggle-button .fa-moon {
+  font-size: 20px;
+  padding-right: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+  
+
+.toggle-button .fa-sun {
+  font-size: 20px;
+  padding-left: 30px;
+  transition: all 0.3s ease-in-out;
+}

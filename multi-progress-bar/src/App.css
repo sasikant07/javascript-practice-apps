@@ -1,0 +1,61 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e0e0e0;
+}
+
+.container {
+  padding: 40px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.click-button,
+.reset-button {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.click-button {
+  background-color: #007bff;
+}
+
+.reset-button {
+  background-color: #ff4d4d;
+}
+
+.limit-text {
+  font-size: 18px;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progress-wrapper {
+  width: 60%;
+  height: 20px;
+  border: 2px solid black;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: pink;
+  transition: width 0.5s linear;
+}

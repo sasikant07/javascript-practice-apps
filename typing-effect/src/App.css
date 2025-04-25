@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+span {
+  animation: hideAndShow 1s infinite;
+  color: red;
+}
+
+@keyframes hideAndShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
